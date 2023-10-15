@@ -1,12 +1,27 @@
-﻿<Window x:Class="StudentInformationApp.MainWindow"
+﻿<Window x:Class="PointApp.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:StudentInformationApp"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Point App" Height="300" Width="400">
     <Grid>
-        
+        <StackPanel Margin="10">
+            <TextBlock Text="Введіть координати точки:" FontWeight="Bold"/>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="X:" Width="30" VerticalAlignment="Center"/>
+                <TextBox x:Name="txtX" Width="100" VerticalAlignment="Center"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Y:" Width="30" VerticalAlignment="Center"/>
+                <TextBox x:Name="txtY" Width="100" VerticalAlignment="Center"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Z:" Width="30" VerticalAlignment="Center"/>
+                <TextBox x:Name="txtZ" Width="100" VerticalAlignment="Center"/>
+            </StackPanel>
+
+            <Button Content="Вивести дані" Click="DisplayData_Click" Margin="0,10,0,0"/>
+            <Button Content="Зберегти в файл" Click="SaveToFile_Click"/>
+            <Button Content="Завантажити з файлу" Click="LoadFromFile_Click" Margin="0,5,0,0"/>
+        </StackPanel>
     </Grid>
 </Window>
+
